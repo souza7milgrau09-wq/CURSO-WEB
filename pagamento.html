@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pagamento - DevMaster Pro</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="payment-box">
+<h1>Plano DevMaster Pro</h1>
+<div class="price">R$ 19,90</div>
+<p>Acesso vitalício à plataforma completa.</p>
+<br>
+<button id="pagar">Pagar com Mercado Pago</button>
+</div>
+
+<script>
+document.getElementById("pagar").addEventListener("click", async () => {
+
+  const response = await fetch("/criar-pagamento", {
+    method: "POST"
+  });
+
+  const data = await response.json();
+
+  window.location.href = `https://www.mercadopago.com.br/checkout/v1/redirect?pref_id=${data.id}`;
+});
+</script>
+
+</body>
+</html>

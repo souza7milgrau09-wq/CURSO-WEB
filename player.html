@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>DevMaster Pro - Formação Completa</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+<div class="sidebar">
+<h2>DevMaster Pro</h2>
+
+<a onclick="trocarVideo('html')">📘 Módulo 1 - HTML</a>
+<a onclick="trocarVideo('css')">🎨 Módulo 2 - CSS</a>
+<a onclick="trocarVideo('js')">⚡ Módulo 3 - JavaScript</a>
+<a onclick="trocarVideo('git')">🔧 Módulo 4 - Git & GitHub</a>
+<a onclick="trocarVideo('node')">🟢 Módulo 5 - Node.js</a>
+<a onclick="trocarVideo('react')">⚛ Módulo 6 - React</a>
+
+<a href="dashboard.html">⬅ Voltar</a>
+</div>
+
+<div class="content">
+<h1 id="tituloAula">📘 Módulo 1 - HTML do Básico ao Avançado</h1>
+
+<div class="video-container">
+<iframe id="playerVideo"
+src="https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9y"
+allowfullscreen>
+</iframe>
+</div>
+
+</div>
+</div>
+
+<script>
+function trocarVideo(modulo){
+
+let titulo = document.getElementById("tituloAula");
+let player = document.getElementById("playerVideo");
+
+if(modulo === "html"){
+titulo.innerText = "📘 Módulo 1 - HTML do Básico ao Avançado";
+player.src = "https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dm4beCCCmW4xwpmLf6EHY9y";
+}
+
+if(modulo === "css"){
+titulo.innerText = "🎨 Módulo 2 - CSS do Básico ao Avançado";
+player.src = "https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dkZ9-atkcmcBaMZdmLHft8n";
+}
+
+if(modulo === "js"){
+titulo.innerText = "⚡ Módulo 3 - JavaScript do Básico ao Avançado";
+player.src = "https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dkI2ZdjTwZA4mPMxWTfNSpRz";
+}
+
+if(modulo === "git"){
+titulo.innerText = "🔧 Módulo 4 - Git & GitHub Completo";
+player.src = "https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dkW8Zb4lW2Hq3zZ6Y3eXgq7F";
+}
+
+if(modulo === "node"){
+titulo.innerText = "🟢 Módulo 5 - Node.js do Básico ao Avançado";
+player.src = "https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dmHn7k3rjX4g1H6U5nFfNn2k";
+}
+
+if(modulo === "react"){
+titulo.innerText = "⚛ Módulo 6 - React do Básico ao Avançado";
+player.src = "https://www.youtube.com/embed/videoseries?list=PLHz_AreHm4dkQeBqvP1A7XjKkG2qYt9v7N";
+}
+
+}
+</script>
+
+</body>
+</html>
